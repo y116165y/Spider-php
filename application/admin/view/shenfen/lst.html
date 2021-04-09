@@ -1,0 +1,50 @@
+﻿{include file="index/meta"}
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui/css/mobile.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/static/h-ui/css/code.css" />
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> 全国天气 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="text-c">
+		<form method="get" action="" class="form-search">
+			<input type="text" name="card_id" id="" placeholder="栏目名称、id" style="width:250px" class="input-text">
+			<input name="" id="" class="btn btn-success" value="查询身份证信息" type="submit">
+		</form>				
+	</div>
+</div>
+<table class="table table-border table-bordered table-bg mt-20">
+	<thead>
+		<tr>
+			<th colspan="2" scope="col">身份信息</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th width="30%">身份证号码</th>
+			<td><span id="lbServerName">{$html.card_id}</span></td>
+		</tr>
+		<tr>
+			<td>户口所在地</td>
+			<td>{$html.result.area}</td>
+		</tr>
+		<tr>
+			<td>性别</td>
+			<td>{$html.result.sex}</td>
+		</tr>
+		<tr>
+			<td>出生日期</td>
+			<td>{$html.result.birthday}</td>
+		</tr>
+	</tbody>
+</table>
+
+<!--_footer 作为公共模版分离出去-->
+{include file="index/foot"}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/lib/laypage/1.2/laypage.js"></script>
+
+</body>
+</html>
